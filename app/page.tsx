@@ -106,7 +106,7 @@ export default function Page() {
                   </div>
                   <div className="rounded-lg border bg-muted/40 p-3 text-sm">
                     <p className="font-semibold">معلومة مهمة:</p>
-                    <p className="text-muted-foreground">سعر الساعة: 70ج</p>
+                    <p className="text-muted-foreground">سعر الساعة: 50ج ثم الزيادة ل 60ج بعد 3 أشهر</p>
                   </div>
                   <a href="#apply" className={cn(buttonVariants({ className: "w-full" }))}>
                     ابدئي الآن
