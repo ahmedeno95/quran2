@@ -55,7 +55,7 @@ export const TeacherApplicationSchema = z.object({
   age: numberFromEnglishDigits("السن", 14, 80),
 
   marital_status: requiredChoice("الحالة الاجتماعية").refine(
-    (v) => ["آنسة", "متزوجة", "مطلقة-أرملة"].includes(v),
+    (v) => ["آنسة", "مخطوبة", "متزوجة", "متزوجة وحامل", "مطلقة-أرملة"].includes(v),
     { message: "من فضلك اختاري الحالة الاجتماعية من الخيارات المتاحة." }
   ),
 
