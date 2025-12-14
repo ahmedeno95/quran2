@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Script from "next/script";
 import { Cairo } from "next/font/google";
-import { Suspense } from "react";
 import "./globals.css";
 import MetaPixel from "@/components/MetaPixel";
 
@@ -41,5 +40,19 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           `}
         </Script>
 
-        {/* Track SPA navigations (must be in Suspense because it uses useSearchParams) */}
-        <Suspe
+        {/* Track SPA navigations */}
+        <MetaPixel />
+
+        <noscript>
+          <img
+            height="1"
+            width="1"
+            style={{ display: "none" }}
+            alt=""
+            src={`https://www.facebook.com/tr?id=${META_PIXEL_ID}&ev=PageView&noscript=1`}
+          />
+        </noscript>
+      </body>
+    </html>
+  );
+}
