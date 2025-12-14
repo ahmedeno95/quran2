@@ -260,7 +260,9 @@ export function StepTwo() {
           name="marital_status"
           options={[
             { label: "آنسة", value: "آنسة" },
+            { label: "مخطوبة", value: "مخطوبة" },,
             { label: "متزوجة", value: "متزوجة" },
+            { label: "متزوجة وحامل", value: "متزوجة وحامل" },
             { label: "مطلقة-أرملة", value: "مطلقة-أرملة" }
           ]}
           columns={3}
