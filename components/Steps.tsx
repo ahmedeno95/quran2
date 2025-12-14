@@ -256,17 +256,17 @@ export function StepTwo() {
       </FieldBlock>
 
       <FieldBlock name="marital_status" label="3) الحالة الاجتماعية">
-        <RadioCards
-          name="marital_status"
-          options={[
-            { label: "آنسة", value: "آنسة" },
-            { label: "مخطوبة", value: "مخطوبة" },,
-            { label: "متزوجة", value: "متزوجة" },
-            { label: "متزوجة وحامل", value: "متزوجة وحامل" },
-            { label: "مطلقة-أرملة", value: "مطلقة-أرملة" }
-          ]}
-          columns={3}
-        />
+<RadioCards
+  name="marital_status"
+  options={[
+    { label: "آنسة", value: "آنسة" },
+    { label: "مخطوبة", value: "مخطوبة" },
+    { label: "متزوجة", value: "متزوجة" },
+    { label: "متزوجة وحامل", value: "متزوجة وحامل" },
+    { label: "مطلقة-أرملة", value: "مطلقة-أرملة" }
+  ]}
+  columns={3}
+/>
       </FieldBlock>
 
       <FieldBlock
