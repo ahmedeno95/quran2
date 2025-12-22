@@ -190,7 +190,7 @@ export function StepOne() {
           name="available_1_to_8"
           options={[
             { label: "نعم", value: "نعم" },
-            { label: "لا", value: "لا" },
+            { label: "لا", value: "لا" }
           ]}
           columns={3}
         />
@@ -260,17 +260,17 @@ export function StepTwo() {
       </FieldBlock>
 
       <FieldBlock name="marital_status" label="3) الحالة الاجتماعية">
-<RadioCards
-  name="marital_status"
-  options={[
-    { label: "آنسة", value: "آنسة" },
-    { label: "مخطوبة", value: "مخطوبة" },
-    { label: "متزوجة", value: "متزوجة" },
-    { label: "متزوجة وحامل", value: "متزوجة وحامل" },
-    { label: "مطلقة-أرملة", value: "مطلقة-أرملة" }
-  ]}
-  columns={3}
-/>
+        <RadioCards
+          name="marital_status"
+          options={[
+            { label: "آنسة", value: "آنسة" },
+            { label: "مخطوبة", value: "مخطوبة" },
+            { label: "متزوجة", value: "متزوجة" },
+            { label: "متزوجة وحامل", value: "متزوجة وحامل" },
+            { label: "مطلقة-أرملة", value: "مطلقة-أرملة" }
+          ]}
+          columns={3}
+        />
       </FieldBlock>
 
       <FieldBlock
@@ -367,7 +367,12 @@ export function StepThree() {
       </FieldBlock>
 
       <FieldBlock name="other_subjects" label="6) مواد أخرى؟ (اختياري)">
-        <Textarea id="other_subjects" rows={3} placeholder="مثال: تحفيظ / تصحيح تلاوة /..." {...register("other_subjects")} />
+        <Textarea
+          id="other_subjects"
+          rows={3}
+          placeholder="مثال: تحفيظ / تصحيح تلاوة /..."
+          {...register("other_subjects")}
+        />
       </FieldBlock>
     </div>
   );
@@ -419,8 +424,8 @@ export function StepFour() {
 
       <FieldBlock
         name="session_plan"
-        wrapperClassName="rounded-2xl border-2 border-amber-400 bg-amber-50/80 p-4"
-        labelClassName="text-base font-extrabold text-amber-800"
+        wrapperClassName="rounded-2xl border-2 border-blue-500 bg-blue-50/80 p-4"
+        labelClassName="text-base font-extrabold text-blue-800"
         label={
           <span className="block space-y-2 leading-relaxed">
             <span className="block">كيف تقسّمين الحلقة مع الطلاب؟</span>
@@ -438,7 +443,7 @@ export function StepFour() {
           id="session_plan"
           rows={8}
           placeholder="اكتبي إجابة تفصيلية..."
-          className="rounded-2xl border-2 border-dashed border-amber-400 bg-white/90 !px-4 !py-3 !text-base leading-relaxed shadow-sm focus-visible:ring-2 focus-visible:ring-amber-300/40"
+          className="rounded-2xl border-2 border-dashed border-blue-500 bg-white/90 !px-4 !py-3 !text-base leading-relaxed shadow-sm focus-visible:ring-2 focus-visible:ring-blue-300/40"
           {...register("session_plan")}
         />
       </FieldBlock>
