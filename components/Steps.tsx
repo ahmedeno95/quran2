@@ -419,8 +419,8 @@ export function StepFour() {
 
       <FieldBlock
         name="session_plan"
-        wrapperClassName="rounded-2xl border-2 border-primary/30 bg-primary/5 p-4"
-        labelClassName="text-base font-extrabold text-primary"
+        wrapperClassName="rounded-2xl border-2 border-amber-400 bg-amber-50/80 p-4"
+        labelClassName="text-base font-extrabold text-amber-800"
         label={
           <span className="block space-y-2 leading-relaxed">
             <span className="block">كيف تقسّمين الحلقة مع الطلاب؟</span>
@@ -438,7 +438,7 @@ export function StepFour() {
           id="session_plan"
           rows={8}
           placeholder="اكتبي إجابة تفصيلية..."
-          className="rounded-2xl border-2 border-primary/30 bg-background/60 !px-4 !py-3 !text-base leading-relaxed shadow-sm focus-visible:ring-2 focus-visible:ring-primary/20"
+          className="rounded-2xl border-2 border-dashed border-amber-400 bg-white/90 !px-4 !py-3 !text-base leading-relaxed shadow-sm focus-visible:ring-2 focus-visible:ring-amber-300/40"
           {...register("session_plan")}
         />
       </FieldBlock>
