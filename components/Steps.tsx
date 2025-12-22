@@ -428,12 +428,12 @@ export function StepFour() {
         labelClassName="text-base font-extrabold text-blue-800"
         label={
           <span className="block space-y-2 leading-relaxed">
-            <span className="block">كيف تقسّمين الحلقة مع الطلاب؟</span>
+            <span className="block">كيف تديرين الحلقة مع الطلاب ؟</span>
             <span className="block text-sm font-semibold text-foreground">
               هذا السؤال هو الأكثر أهمية في التمييز بين المتقدمين.
             </span>
             <span className="block text-sm font-normal text-foreground/80">
-              رجاءًا جاوبي بالتفصيل ووضحي محتوى الحلقة، وما الوسائل التعليمية التي تستخدمينها في الحلقة،
+              رجاءًا جاوبي بالتفصيل، وضحي محتوى الحلقة كاملاً، وما الوسائل التعليمية التي تستخدمينها في الحلقة،
               وما نظام الحلقة الذي تتبعينه، منذ دخول الطالب الحلقة للنهاية.
             </span>
           </span>
