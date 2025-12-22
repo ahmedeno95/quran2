@@ -19,12 +19,16 @@ function FieldBlock({
   name,
   label,
   hint,
-  children
+  children,
+  wrapperClassName,
+  labelClassName
 }: {
   name: keyof TeacherApplicationFormInput;
-  label: string;
+  label: React.ReactNode;
   hint?: string;
   children: React.ReactNode;
+  wrapperClassName?: string;
+  labelClassName?: string;
 }) {
   const {
     formState: { errors }
@@ -33,8 +37,8 @@ function FieldBlock({
   const message = (errors as any)?.[name]?.message as string | undefined;
 
   return (
-    <div className="space-y-2">
-      <Label className="text-sm font-semibold" htmlFor={String(name)}>
+    <div className={cn("space-y-2", wrapperClassName)}>
+      <Label className={cn("text-sm font-semibold", labelClassName)} htmlFor={String(name)}>
         {label}
       </Label>
       {children}
@@ -413,8 +417,30 @@ export function StepFour() {
         <Textarea id="academies_worked_with" rows={3} placeholder="..." {...register("academies_worked_with")} />
       </FieldBlock>
 
-      <FieldBlock name="session_plan" label="7) كيف تقسمين الحلقة القرآنية؟" hint="وصف تفصيلي (مثال: تلاوة/تصحيح/مراجعة/تجويد/واجب).">
-        <Textarea id="session_plan" rows={4} placeholder="..." {...register("session_plan")} />
+      <FieldBlock
+        name="session_plan"
+        wrapperClassName="rounded-2xl border-2 border-primary/30 bg-primary/5 p-4"
+        labelClassName="text-base font-extrabold text-primary"
+        label={
+          <span className="block space-y-2 leading-relaxed">
+            <span className="block">كيف تقسّمين الحلقة مع الطلاب؟</span>
+            <span className="block text-sm font-semibold text-foreground">
+              هذا السؤال هو الأكثر أهمية في التمييز بين المتقدمين.
+            </span>
+            <span className="block text-sm font-normal text-foreground/80">
+              رجاءًا جاوبي بالتفصيل ووضحي محتوى الحلقة، وما الوسائل التعليمية التي تستخدمينها في الحلقة،
+              وما نظام الحلقة الذي تتبعينه، منذ دخول الطالب الحلقة للنهاية.
+            </span>
+          </span>
+        }
+      >
+        <Textarea
+          id="session_plan"
+          rows={8}
+          placeholder="اكتبي إجابة تفصيلية..."
+          className="rounded-2xl border-2 border-primary/30 bg-background/60 !px-4 !py-3 !text-base leading-relaxed shadow-sm focus-visible:ring-2 focus-visible:ring-primary/20"
+          {...register("session_plan")}
+        />
       </FieldBlock>
 
       <FieldBlock name="agree_no_stopping_students_policy" label="8) شرط عدم التوقف مع الطلاب…">
